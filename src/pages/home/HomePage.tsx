@@ -5,15 +5,11 @@ import { useContextAPIGlobal } from '../../context/GlobalContext';
 import { useEffect, useState } from 'react';
 import { PokemonLocal } from '../../models/local';
 import { getPokemonList, MAX_LIMIT } from '../../utils/axios.service';
-import { InputAheadSearchComponent, PaginatorComponent, PokemonListComponent } from '../../components';
+import { CurtainComponent, InputAheadSearchComponent, PaginatorComponent, PokemonListComponent } from '../../components';
 
 const HomePage = () =>{
    
     const pokemonList = useLoaderData() as PokemonDTO[];
-    const getSelection =(name:string)=> {
-        console.log(name);
-    }
-
     const {favoriteState} = useContextAPIGlobal();
     const [pokemonListToDisplay,setpokemonListToDisplay] = useState<PokemonLocal[]>([]);
 
@@ -35,13 +31,12 @@ const HomePage = () =>{
     }
 
     return(
-        <div className='home-container'>
-            <InputAheadSearchComponent setSelection={getSelection}></InputAheadSearchComponent>
+        <>
+            <InputAheadSearchComponent></InputAheadSearchComponent>
             <PokemonListComponent pokemonList={pokemonListToDisplay}></PokemonListComponent>
             <PaginatorComponent numOfElements={MAX_LIMIT} currentPage={1} updatePage={updatePage}></PaginatorComponent>
-            <div className="curtain-top"></div>
-            <div className="curtain-bottom"> </div>            
-        </div>
+            <CurtainComponent></CurtainComponent>
+        </>
 
     )
 }

@@ -1,11 +1,14 @@
 import { useLoaderData } from "react-router-dom";
 import './detail.scss';
 import { PokemonDetailLocal } from "../../models/local";
+import { CurtainComponent } from "../../components";
 const DetailPage = () =>{
     const pokemonDetail = useLoaderData() as PokemonDetailLocal;
     const pokemonImgUrl ="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home";
 
     return (
+        <>
+        <CurtainComponent></CurtainComponent>
         <div className="details">
             <div className={`details_image poke_container_${pokemonDetail.types[0]}`}>
                 <div className={`details_title poke_font_${pokemonDetail.types[0]}`}>{pokemonDetail.name}</div>
@@ -21,7 +24,7 @@ const DetailPage = () =>{
                      { (pokemonDetail.abilities.length>1) && <span>, {pokemonDetail.abilities[1]}</span> }
                 </div>
                 <div className={`poke_font_${pokemonDetail.types[0]} subtitle` }>Height</div> <div>{pokemonDetail.height} Mtr</div>
-                <div className={`poke_font_${pokemonDetail.types[0]} subtitle`}>Width</div> <div> {pokemonDetail.weight} Lb</div>
+                <div className={`poke_font_${pokemonDetail.types[0]} subtitle`}>Weight</div> <div> {pokemonDetail.weight} Lb</div>
                 <div className={`poke_font_${pokemonDetail.types[0]} subtitle`}>Habitat</div> <div>{(pokemonDetail.habitat) && pokemonDetail.habitat}</div>
             </div>
             <div className="details_description">
@@ -30,6 +33,7 @@ const DetailPage = () =>{
                 <p>{(pokemonDetail.flavor_text_entries.length>=4) && pokemonDetail.flavor_text_entries[4]} </p>
             </div>
         </div>
+        </>
     )
 }
 

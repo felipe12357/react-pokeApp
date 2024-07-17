@@ -3,11 +3,8 @@ import { filterSearch } from "../../utils/axios.service";
 import './inputAheadSearchComponent.scss';
 import { useNavigate } from "react-router-dom";
 
-interface InputAheadSearchProps {
-    setSelection:(element:string)=>void
-};
 
-export const InputAheadSearchComponent:React.FC<InputAheadSearchProps> = ({setSelection}) =>{
+export const InputAheadSearchComponent = () =>{
 
     const [searchResults,setSearchResults] = useState<{name:string}[]>([]);
     const [isLoading,setIsLoading] = useState<boolean>(false);
@@ -77,3 +74,4 @@ export const InputAheadSearchComponent:React.FC<InputAheadSearchProps> = ({setSe
 
     )
 }
+

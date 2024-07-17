@@ -29,7 +29,7 @@ export const PokemonListComponent:React.FC<PokemonListProps> = ({pokemonList})=>
     }
 
     const handleFavorite =(pokemon:PokemonLocal)=>{
-        
+
         (!pokemon.isFavorite) ?
             dispatch({type:ACTION_TYPES_FAVORITE_ENUM.SET_ELEMENT,payload:{...pokemon,isFavorite:true}})
         :  dispatch({type:ACTION_TYPES_FAVORITE_ENUM.REMOVE_ELEMENT,payload:pokemon})
@@ -37,6 +37,7 @@ export const PokemonListComponent:React.FC<PokemonListProps> = ({pokemonList})=>
         const position =pokemonListToDisplay.findIndex(({name})=>pokemon.name === name)
         const pokemonState = (pokemon.isFavorite) ?  {...pokemon,isFavorite:false} : {...pokemon,isFavorite:true};
         pokemonListToDisplay[position]=pokemonState;
+        debugger
         setpokemonListToDisplay(pokemonListToDisplay);
     }
 
