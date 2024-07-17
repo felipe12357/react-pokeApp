@@ -1,0 +1,52 @@
+@import '../../constants.scss';
+@import '../../mixmins.scss';
+
+.message {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.list-container {
+
+    max-height: 500px;
+    overflow-y: scroll;
+    width:800px;
+    overflow-x: hidden;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom:20px;
+    box-shadow: $box-shadow;
+    
+
+    .row-container {
+        display: flex;
+        justify-content: space-between;
+        background-color: $color-grey-light;
+        border:$border-style-widther;
+        @include row-list;
+
+
+        :nth-child(2){
+            padding-right: 15px;
+        }
+    }
+
+    .tooltip:hover:after {
+        content: 'check/uncheck as favorite';
+        font-family:'verdana';
+    } 
+    .marked-favorite{
+        color:$color-red;
+    }
+
+    .unmarked{
+        color:$color-dark
+    }
+
+    .tooltip:hover:after {
+        top: -40px;
+        left: -100px;
+    }
+
+}

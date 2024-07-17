@@ -1,0 +1,37 @@
+@import '../../constants.scss';
+.login-form {
+    
+    display: grid;
+    grid-template-columns: 20% 80%;
+    justify-content: center;
+    width: 600px;
+    margin: auto;
+    flex-wrap: wrap;
+    margin-top: 10%;
+    background-color: $color-red;
+    color:$color-white;
+    border-radius: $border-radius-style;
+    padding:50px 30px;
+    
+
+
+    label {
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        width:40%;
+        display: inline-block;
+    }
+
+    input {
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        width:60%;
+        display: inline-block;
+    }
+
+    :nth-child(3){
+        grid-column: 2 /span 2;
+        margin-top: 20px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,281 @@
+@import './constants.scss';
+@font-face {
+  font-family: 'Pokemon';
+  src: url('./assets/fonts/pokemon/Pokemon-Solid.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Moltors';
+  src: url('./assets/fonts/Moltors.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family:'Moltors';
+  height: 100%;
+  width: 100%;
+}
+
+.button {
+  background-color: $color-red;
+  padding: .75rem 10px;
+  font-family:'Moltors';
+  color:$color-white;
+  border-radius: $border-radius-style;
+  border: $border-style;
+  cursor:pointer;
+
+  &:hover, &:active{
+    background-color: $color-red-dark;
+  }
+  &.active{
+    background-color: $color-red-dark;
+  }
+}
+
+input {
+  padding: .375rem .75rem;
+  font-size:1rem;
+  background-color:$color-white;
+  border: $border-style;
+  font-family: Moltors;
+
+  &:active, &:focus {
+    outline: none ;
+    border: $border-style-widther;
+    border-color: $color-red;
+  }
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.tooltip:hover:after {
+  background: #333;
+  border-radius: 5px;
+  color: #fff;
+  padding: 5px 15px;
+  font-size: 13px;
+  position:absolute;
+} 
+
+.tooltip-container{
+  position: relative;
+  display: inline-block;
+}
+
+
+.poke{
+  &_container{
+      &_rock{
+          color:$color-dark;
+          background-color: rgba($color-brown-light,.3);
+          border: $border-style-widther;
+          border-color:$color-brown-light ;
+      }
+
+      &_rock_border{
+        border: $border-style-widther;
+        border-color:$color-brown-light ;
+      }
+
+      &_grass{
+          background-color: rgba($color-green-dark,.3);
+          color:$color-white;
+          border: $border-style-widther;
+          border-color:$color-green-dark ;
+      }
+  
+      &_fire{
+          background-color:rgba( $color-red,.3);
+          color:$color-white;
+          border: $border-style-widther;
+          border-color:$color-red;
+      }
+
+      &_poison{
+          background-color:rgba( $color-violet,.3);
+          color:$color-white;
+          border: $border-style-widther;
+          border-color:$color-violet;
+      }
+
+      &_water{
+          background-color:rgba( $color-blue,.3);
+          color:$color-white; 
+          border: $border-style-widther;
+          border-color:$color-blue;
+      }
+
+      &_bug{
+          background-color:rgba(  $color-green,.3);
+          color:$color-white; 
+          border: $border-style-widther;
+          border-color:$color-green;
+      }
+  
+      &_flying{
+          background-color:rgba( $color-blue-medium,.3);
+          color:$color-dark; 
+          border: $border-style-widther;
+          border-color:$color-blue-medium;
+      }
+  
+      &_electric{
+          background-color:rgba( $color-yellow,.3);
+          color:$color-dark;
+          border: $border-style-widther;
+          border-color:$color-yellow; 
+      }
+  
+      &_ground{
+          background-color:rgba( $color-brown,.3);
+          color:$color-white;
+          border: $border-style-widther;
+          border-color:$color-brown; 
+      }
+  
+      &_fairy{
+          background-color:rgba( $color-pink,.3);
+          color:$color-white; 
+          border: $border-style-widther;
+          border-color:$color-pink;
+      }
+  
+      &_fighting{
+          background-color:rgba( $color-red-dark,.3);
+          color:$color-white; 
+          border: $border-style-widther;
+          border-color:$color-red-dark;
+      }
+  
+      &_psychic{
+          background-color:rgba( $color-pink-dark,.3);
+          color:$color-white; 
+          border: $border-style-widther;
+          border-color:$color-pink-dark;
+      }
+  
+      &_dragon{
+          background-color:rgba( $color-blue-dark,.3);
+          color:$color-white; 
+          border: $border-style-widther;
+          border-color:$color-blue-dark;
+      }
+  
+      &_ghost{
+          background-color:rgba($color-purple,.3);
+          color:$color-white; 
+          border: $border-style-widther;
+          border-color:$color-purple;
+      }
+  
+      &_steel{
+          background-color:rgba($color-silver,.3);
+          color:$color-dark; 
+          border: $border-style-widther;
+          border-color:$color-silver;
+      }
+
+      &_ice{
+          background-color:rgba($color-blue-light,.3);
+          color:$color-dark; 
+          border: $border-style-widther;
+          border-color:$color-blue-light;
+      }
+
+      &_normal{
+          background-color:rgba($color-grey-light,.3);
+          color:$color-dark; 
+          border: $border-style-widther;
+          border-color:$color-grey-light;
+      }
+
+      &_dark{
+          background-color:rgba($color-dark,.3);
+          color:$color-white; 
+          border: $border-style-widther;
+          border-color:$color-dark;
+      }
+
+  } 
+
+  &_font{
+      &_normal {
+          color:$color-dark;
+      }
+
+      &_grass{
+          color: $color-green-dark;
+      }
+
+      &_rock{
+          color: $color-brown-light;
+      }
+  
+      &_fire{
+          color: $color-red;
+      }
+  
+      &_poison{
+          color: $color-violet;
+      }
+  
+      &_water{
+          color:$color-blue;
+      }
+  
+      &_bug{
+          color:  $color-green;
+      }
+  
+      &_flying{
+          color:$color-dark;
+      }
+  
+      &_electric{
+          color: $color-dark;
+      }
+  
+      &_ground{
+          color:$color-brown; 
+      }
+  
+      &_fairy{
+          color:$color-pink; 
+      }
+  
+      &_fighting{
+          color:$color-red-dark; 
+      }
+  
+      &_psychic{
+          color:$color-pink-dark;
+      }
+  
+      &_dragon{
+          color:$color-blue-dark;
+      }
+  
+      &_ghost{
+          color:$color-purple;
+      }
+  
+      &_steel{
+          color:$color-dark;
+      }
+
+      &_ice{
+          color:$color-blue;
+      }
+
+      &_dark{
+          color:$color-dark;
+      }
+  }
+}

@@ -1,0 +1,74 @@
+@import '../../constants.scss';
+.details {
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr;
+
+    width:900px;
+    
+    border-radius: 10px;
+    gap:20px;
+   
+    margin: auto;
+    margin-top: 50px;
+
+    &_title {
+        text-transform: capitalize;
+        letter-spacing: 4px;
+        font-size: 38px;
+        font-family: 'Pokemon';
+    }
+
+    .subtitle {
+        font-weight: bold;
+        
+    }
+    
+    &_image {
+        height:40vh;
+        text-align: center;
+        position: relative;
+        display: block;
+        border-radius: 10px;
+        box-shadow: $box-shadow-small;
+        img {
+            height: 80%;
+            position: relative;
+            top:-50px
+        }
+    }
+
+    &_characteristcs {
+        padding: 20px;
+        text-transform: capitalize;
+        letter-spacing: 4px;
+        height: 40vh;
+        background-color: rgba($color-grey-light,.3);
+        border-radius: 10px;
+        box-shadow: $box-shadow-small;
+        display: grid;
+        box-sizing: border-box;
+        grid-template-columns: 1fr 1fr;
+        border: $border-style-widther;
+        border-color:$color-grey-light;
+    }
+
+    &_description {
+        grid-column: 1 /span 2;
+        text-align: justify;
+        height: 20vh;
+        background-color: rgba($color-grey-light,.3);
+        padding:10px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        box-shadow: $box-shadow-small;
+        border: $border-style-widther;
+        border-color:$color-grey-light;
+        overflow-y: scroll;
+        line-height: 2;
+        p {
+            margin: 0px;
+            padding: 0px;
+        }
+    }
+}

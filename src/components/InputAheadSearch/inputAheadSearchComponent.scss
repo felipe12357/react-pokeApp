@@ -1,0 +1,41 @@
+@import '../../constants.scss';
+@import '../../mixmins.scss';
+input {
+    width:245px
+}
+.ahead{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    box-sizing: content-box;
+
+    .search-btn{
+        padding:8.5px 15px;
+    }
+
+    .input-container{
+        position: relative;
+        display: block;
+    
+        .search-results{
+            margin: auto;
+            position: absolute;
+            width: 253px;
+            background-color: $color-grey-light;
+            border:$border-style-widther;
+            border-color: $color-red;
+            div{
+                @include row-list;
+            }
+        }
+    }
+}
+
+
+
+
+.search-messagge {
+    text-align: center;
+    height:10px;
+}

@@ -1,0 +1,46 @@
+@import './../../constants.scss';
+.header{
+    background-color: $color-red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 12.4vh;
+
+    >:nth-child(1){
+        display: flex;
+        margin-left:7%;
+        font-family:'Pokemon';
+        color:$color-yellow;
+        font-size: 40px;
+        letter-spacing: 4px;
+        align-items: center;
+        cursor:pointer;
+    }
+
+    :nth-child(2){
+        margin-right:7%;
+        color:$color-white;
+        display: flex;
+        align-items: center;
+        
+    }
+
+    .pokeball{
+        width:80px;
+        height: 80px;
+    }
+
+    .icon{
+        margin-left:10px;
+    }
+}
+
+
+.tooltip:hover:after {
+    content: 'Sign Out';
+    font-family:'verdana';
+} 
+
+
+
+

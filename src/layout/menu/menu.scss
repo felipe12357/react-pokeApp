@@ -1,0 +1,15 @@
+@import './../../constants.scss';
+.menu{
+    display: flex;
+    justify-content: space-around;
+    background-color:$color-grey-light ;
+
+    div{
+        cursor:pointer
+    }
+
+    .active{
+        color:$color-red-dark;
+        text-decoration: underline;
+    }
+}

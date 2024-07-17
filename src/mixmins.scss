@@ -1,0 +1,11 @@
+
+@mixin row-list {
+    cursor: pointer;
+    padding-top:10px;
+    padding-left:15px;
+    padding-bottom: 10px;
+    &:hover {
+        background-color: $color-red-dark;
+        color:$color-white;
+    }
+}
