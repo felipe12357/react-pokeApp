@@ -1,3 +1,4 @@
+import { PokemonDTO } from "./dtos";
 
 export type PokemonLocal = {
     name:string,
@@ -14,4 +15,10 @@ export type PokemonDetailLocal = {
     habitat:string;
     flavor_text_entries:string[];
     abilities:string[]
+}
+
+export interface PokemonI {
+    filterSearch: (searchText:string)=> Promise<PokemonDTO[] | undefined>;
+    getPokemonList: (pageNumber:number)=> Promise<PokemonDTO[]>;
+    getPokemonDetail: (id:string) => Promise<PokemonDetailLocal>
 }

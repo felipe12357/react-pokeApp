@@ -1,4 +1,4 @@
-import { act, fireEvent, render,screen, waitFor } from "@testing-library/react";
+import {  fireEvent, render,screen } from "@testing-library/react";
 import { PokemonListComponent } from "./PokemonListComponent";
 import '@testing-library/jest-dom';
 import { PokemonLocal } from "../../models/local";

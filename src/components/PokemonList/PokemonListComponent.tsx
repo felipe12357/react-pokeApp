@@ -37,7 +37,6 @@ export const PokemonListComponent:React.FC<PokemonListProps> = ({pokemonList})=>
         const position =pokemonListToDisplay.findIndex(({name})=>pokemon.name === name)
         const pokemonState = (pokemon.isFavorite) ?  {...pokemon,isFavorite:false} : {...pokemon,isFavorite:true};
         pokemonListToDisplay[position]=pokemonState;
-        debugger
         setpokemonListToDisplay(pokemonListToDisplay);
     }
 

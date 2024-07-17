@@ -1,5 +1,5 @@
 import { ChangeEvent, useEffect, useRef, useState } from "react";
-import { filterSearch } from "../../utils/axios.service";
+import { pokeService } from "../../utils/axios.service";
 import './inputAheadSearchComponent.scss';
 import { useNavigate } from "react-router-dom";
 
@@ -29,7 +29,7 @@ export const InputAheadSearchComponent = () =>{
         const searchText = event.target.value.toLowerCase();
         timeoutRef.current = setTimeout(async()=>{
             if(searchText!==''){
-                let search = await filterSearch(searchText);
+                let search = await pokeService.filterSearch(searchText);
                 if(search){
                     if(search.length>4) { 
                         search =search.slice(0,3);
