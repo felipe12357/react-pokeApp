@@ -3,7 +3,7 @@ import { PaginatorComponent } from "./PaginatorComponent";
 import '@testing-library/jest-dom';
 describe("PaginatorComponent",()=>{
 
-    jest.mock('../../utils/axios.service', () => ({
+    jest.mock('../../utils/pokemonService', () => ({
         ELEMENTS_X_PAGE: 20
     })) 
 

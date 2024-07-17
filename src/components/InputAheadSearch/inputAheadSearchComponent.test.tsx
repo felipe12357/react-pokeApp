@@ -1,7 +1,8 @@
 import {InputAheadSearchComponent} from './InputAheadSearchComponent';
 import { render, fireEvent, screen, act } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { pokeService } from '../../utils/axios.service';
+import { pokeRepository } from '../../utils/pokemonService';
+
 const mockUsedNavigate = jest.fn();
 
 jest.mock('react-router-dom', () => ({
@@ -13,7 +14,7 @@ jest.mock('react-router-dom', () => ({
 describe("InputAheadComponent",()=>{
 
     test('should show results bring by the service',async()=>{
-        jest.spyOn(pokeService, 'filterSearch').mockResolvedValue([
+        jest.spyOn(pokeRepository, 'filterSearch').mockResolvedValue([
             { name: 'pikachu',url:'' },
             { name: 'bulbasaur',url:'' },
             { name: 'charizard',url:'' },
@@ -44,7 +45,7 @@ describe("InputAheadComponent",()=>{
 
 
     test('should show not result foound',async()=>{
-        jest.spyOn(pokeService, 'filterSearch').mockResolvedValue([]);
+        jest.spyOn(pokeRepository, 'filterSearch').mockResolvedValue([]);
 
         render(<InputAheadSearchComponent></InputAheadSearchComponent>);
         expect(screen.queryByText('Loading ...')).not.toBeInTheDocument();

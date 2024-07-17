@@ -16,9 +16,3 @@ export type PokemonDetailLocal = {
     flavor_text_entries:string[];
     abilities:string[]
 }
-
-export interface PokemonI {
-    filterSearch: (searchText:string)=> Promise<PokemonDTO[] | undefined>;
-    getPokemonList: (pageNumber:number)=> Promise<PokemonDTO[]>;
-    getPokemonDetail: (id:string) => Promise<PokemonDetailLocal>
-}

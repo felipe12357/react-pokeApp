@@ -1,7 +1,7 @@
-import { render, waitFor, fireEvent, act } from '@testing-library/react';
+import { render, fireEvent, act } from '@testing-library/react';
 import HomePage from './HomePage';
 import '@testing-library/jest-dom';
-import { pokeService } from '../../utils/axios.service';
+import { pokeRepository } from '../../utils/pokemonService';
 
 
 const mockPokemonList = [
@@ -27,7 +27,7 @@ describe('HomePage Component', () => {
 
     test('updatePage updates pokemonListToDisplay correctly', async() => {
         // Mock de la función getPokemonList
-        jest.spyOn(pokeService, 'getPokemonList').mockResolvedValue([
+        jest.spyOn(pokeRepository, 'getPokemonList').mockResolvedValue([
             { name: 'Charmander',url: 'https://pokeapi.co/api/v2/pokemon/3/', }] );
 
         const { getByText } = render(<HomePage />);

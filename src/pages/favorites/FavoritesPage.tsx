@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useContextAPIGlobal } from "../../context/GlobalContext";
-import { ELEMENTS_X_PAGE } from "../../utils/axios.service";
+import { ELEMENTS_X_PAGE } from "../../Infraestructure/dataSources/axios.service";
 import { PaginatorComponent, PokemonListComponent } from "../../components";
 import './favorites.scss';
 

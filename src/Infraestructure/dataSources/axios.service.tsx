@@ -1,6 +1,6 @@
 import axios from "axios";
-import { PokemonListDTO,PokemonDTO, PokemonDetailDTO } from "../models/dtos";
-import { PokemonDetailLocal, PokemonI } from "../models/local";
+import { PokemonListDTO,PokemonDTO, PokemonDetailDTO } from "../../models/dtos";
+import { PokemonDetailLocal } from "../../models/local";
 
 const pokemonAxiosInstance = axios.create({
     baseURL:'https://pokeapi.co/api/v2',
@@ -10,7 +10,13 @@ let pokemonList:PokemonDTO[]=[];
 export const MAX_LIMIT:number =1025;
 export const ELEMENTS_X_PAGE =20;
 
-class PokemonService implements PokemonI {
+export interface PokemonServiceI {
+    filterSearch: (searchText:string)=> Promise<PokemonDTO[] | undefined>;
+    getPokemonList: (pageNumber:number)=> Promise<PokemonDTO[]>;
+    getPokemonDetail: (id:string) => Promise<PokemonDetailLocal>
+}
+
+export class PokemonService implements PokemonServiceI {
 
     filterSearch = async(searchText:string):Promise<PokemonDTO[] | undefined>=>{
         try{
@@ -61,4 +67,4 @@ class PokemonService implements PokemonI {
     
 }
 
-export const pokeService = new PokemonService()
+

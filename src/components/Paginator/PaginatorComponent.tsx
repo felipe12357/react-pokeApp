@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ELEMENTS_X_PAGE } from "../../utils/axios.service";
+import { ELEMENTS_X_PAGE } from "../../Infraestructure/dataSources/axios.service";
 import './paginator.scss';
 
 interface PaginationProps {

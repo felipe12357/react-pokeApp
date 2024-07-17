@@ -4,8 +4,9 @@ import { PokemonDTO } from '../../models/dtos';
 import { useContextAPIGlobal } from '../../context/GlobalContext';
 import { useEffect, useState } from 'react';
 import { PokemonLocal } from '../../models/local';
-import { pokeService, MAX_LIMIT } from '../../utils/axios.service';
+import {  MAX_LIMIT } from '../../Infraestructure/dataSources/axios.service';
 import { CurtainComponent, InputAheadSearchComponent, PaginatorComponent, PokemonListComponent } from '../../components';
+import { pokeRepository } from '../../utils/pokemonService';
 
 const HomePage = () =>{
    
@@ -18,7 +19,7 @@ const HomePage = () =>{
     },[])
 
     const updatePage=async(page:number)=>{
-        const pokemonList =await pokeService.getPokemonList(page);
+        const pokemonList =await pokeRepository.getPokemonList(page);
         (pokemonList) && updatePokemonList(pokemonList);
     }
 
