@@ -13,6 +13,68 @@
   font-style: normal;
 }
 
+:root{
+    --color-grass:34, 139, 34;
+    --color-grass-font:34, 139, 34;
+
+    --color-rock:210, 180, 140;
+    --color-rock-font:0,0,0;
+
+    --color-fire:255, 0, 0;
+    --color-fire-font:255, 0, 0;
+
+    --color-poison:199, 21, 133;
+    --color-poison-font:199, 21, 133;
+
+    --color-poison:199, 21, 133;
+    --color-poison-font:199, 21, 133;
+
+    --color-water:65, 105, 225;
+    --color-water-font:65, 105, 225;
+
+    --color-bug:50, 205, 50;
+    --color-bug-font:50, 205, 50;
+
+    --color-flying:175, 238, 238;
+    --color-flying-font:0,0,0;
+
+    --color-electric:255, 215, 0;
+    --color-electric-font:0,0,0;
+
+    --color-ground:218, 165, 32;
+    --color-ground-font:218, 165, 32;
+
+    --color-fairy:255, 105, 180;
+    --color-fairy-font:255, 105, 180;
+
+    --color-fighting:178, 34, 34;
+    --color-fighting-font:178, 34, 34;
+
+    --color-psychic:255, 20, 147;
+    --color-psychic-font:255, 20, 147;
+
+    --color-dragon:0, 0, 139;
+    --color-dragon-font:0, 0, 139;
+
+    --color-ghost:75, 0, 130;
+    --color-ghost-font:75, 0, 130;
+
+    --color-steel:192, 192, 192;
+    --color-steel-font:0, 0, 0;
+
+    --color-steel:192, 192, 192;
+    --color-steel-font:0, 0, 0;
+
+    --color-ice:135, 206, 235;
+    --color-ice-font:0, 0, 0;
+
+    --color-dark:0,0,0;
+    --color-dark-font:0,0,0;
+
+    --color-normal:224, 224, 224;
+    --color-normal-font:0,0,0;
+}
+
 body {
   margin: 0;
   font-family:'Moltors';
@@ -71,211 +133,11 @@ input {
 
 
 .poke{
-  &_container{
-      &_rock{
-          color:$color-dark;
-          background-color: rgba($color-brown-light,.3);
+    &_container{
+          color:rgb(var(--dynamic-color-font));
+          background-color: rgba(var(--dynamic-color),.3);
           border: $border-style-widther;
-          border-color:$color-brown-light ;
-      }
-
-      &_rock_border{
-        border: $border-style-widther;
-        border-color:$color-brown-light ;
-      }
-
-      &_grass{
-          background-color: rgba($color-green-dark,.3);
-          color:$color-white;
-          border: $border-style-widther;
-          border-color:$color-green-dark ;
-      }
-  
-      &_fire{
-          background-color:rgba( $color-red,.3);
-          color:$color-white;
-          border: $border-style-widther;
-          border-color:$color-red;
-      }
-
-      &_poison{
-          background-color:rgba( $color-violet,.3);
-          color:$color-white;
-          border: $border-style-widther;
-          border-color:$color-violet;
-      }
-
-      &_water{
-          background-color:rgba( $color-blue,.3);
-          color:$color-white; 
-          border: $border-style-widther;
-          border-color:$color-blue;
-      }
-
-      &_bug{
-          background-color:rgba(  $color-green,.3);
-          color:$color-white; 
-          border: $border-style-widther;
-          border-color:$color-green;
-      }
-  
-      &_flying{
-          background-color:rgba( $color-blue-medium,.3);
-          color:$color-dark; 
-          border: $border-style-widther;
-          border-color:$color-blue-medium;
-      }
-  
-      &_electric{
-          background-color:rgba( $color-yellow,.3);
-          color:$color-dark;
-          border: $border-style-widther;
-          border-color:$color-yellow; 
-      }
-  
-      &_ground{
-          background-color:rgba( $color-brown,.3);
-          color:$color-white;
-          border: $border-style-widther;
-          border-color:$color-brown; 
-      }
-  
-      &_fairy{
-          background-color:rgba( $color-pink,.3);
-          color:$color-white; 
-          border: $border-style-widther;
-          border-color:$color-pink;
-      }
-  
-      &_fighting{
-          background-color:rgba( $color-red-dark,.3);
-          color:$color-white; 
-          border: $border-style-widther;
-          border-color:$color-red-dark;
-      }
-  
-      &_psychic{
-          background-color:rgba( $color-pink-dark,.3);
-          color:$color-white; 
-          border: $border-style-widther;
-          border-color:$color-pink-dark;
-      }
-  
-      &_dragon{
-          background-color:rgba( $color-blue-dark,.3);
-          color:$color-white; 
-          border: $border-style-widther;
-          border-color:$color-blue-dark;
-      }
-  
-      &_ghost{
-          background-color:rgba($color-purple,.3);
-          color:$color-white; 
-          border: $border-style-widther;
-          border-color:$color-purple;
-      }
-  
-      &_steel{
-          background-color:rgba($color-silver,.3);
-          color:$color-dark; 
-          border: $border-style-widther;
-          border-color:$color-silver;
-      }
-
-      &_ice{
-          background-color:rgba($color-blue-light,.3);
-          color:$color-dark; 
-          border: $border-style-widther;
-          border-color:$color-blue-light;
-      }
-
-      &_normal{
-          background-color:rgba($color-grey-light,.3);
-          color:$color-dark; 
-          border: $border-style-widther;
-          border-color:$color-grey-light;
-      }
-
-      &_dark{
-          background-color:rgba($color-dark,.3);
-          color:$color-white; 
-          border: $border-style-widther;
-          border-color:$color-dark;
-      }
-
-  } 
-
-  &_font{
-      &_normal {
-          color:$color-dark;
-      }
-
-      &_grass{
-          color: $color-green-dark;
-      }
-
-      &_rock{
-          color: $color-brown-light;
-      }
-  
-      &_fire{
-          color: $color-red;
-      }
-  
-      &_poison{
-          color: $color-violet;
-      }
-  
-      &_water{
-          color:$color-blue;
-      }
-  
-      &_bug{
-          color:  $color-green;
-      }
-  
-      &_flying{
-          color:$color-dark;
-      }
-  
-      &_electric{
-          color: $color-dark;
-      }
-  
-      &_ground{
-          color:$color-brown; 
-      }
-  
-      &_fairy{
-          color:$color-pink; 
-      }
-  
-      &_fighting{
-          color:$color-red-dark; 
-      }
-  
-      &_psychic{
-          color:$color-pink-dark;
-      }
-  
-      &_dragon{
-          color:$color-blue-dark;
-      }
-  
-      &_ghost{
-          color:$color-purple;
-      }
-  
-      &_steel{
-          color:$color-dark;
-      }
-
-      &_ice{
-          color:$color-blue;
-      }
-
-      &_dark{
-          color:$color-dark;
-      }
-  }
+          border-color:rgb(var(--dynamic-color));
+    }
 }
+

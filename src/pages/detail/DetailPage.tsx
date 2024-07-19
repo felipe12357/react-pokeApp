@@ -5,12 +5,24 @@ import { CurtainComponent } from "../../components";
 const DetailPage = () =>{
     const pokemonDetail = useLoaderData() as PokemonDetailLocal;
     const pokemonImgUrl ="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home";
+   
+    
+    const getColorValue = (colorName:string) => {
+        const rootStyles = getComputedStyle(document.documentElement);
+        return rootStyles.getPropertyValue(`--${colorName}`).trim();
+      };
 
+    const style = { 
+            '--dynamic-color':getColorValue(`color-${pokemonDetail.types[0]}`),
+            '--dynamic-color-font':getColorValue(`color-${pokemonDetail.types[0]}-font`),
+     } as  React.CSSProperties;
+ 
     return (
         <>
         <CurtainComponent></CurtainComponent>
         <div className="details">
-            <div className={`details_image poke_container_${pokemonDetail.types[0]}`}>
+             
+            <div className={`details_image poke_container`} style={style}>
                 <div className={`details_title poke_font_${pokemonDetail.types[0]}`}>{pokemonDetail.name}</div>
                 <img src={ `${pokemonImgUrl}/${pokemonDetail.id}.png`}></img>
             </div>
