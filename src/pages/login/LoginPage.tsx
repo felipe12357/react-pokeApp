@@ -10,7 +10,6 @@ const LoginPage = () =>{
         event.preventDefault();
         const formData = new FormData(event.target as HTMLFormElement);
         const user = formData.get('user') as string;
-        const password = formData.get('password') as string;
 
         SetCurrentUser(user);
         navigate('/home');

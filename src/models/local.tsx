@@ -1,4 +1,3 @@
-import { PokemonDTO } from "./dtos";
 
 export type PokemonLocal = {
     name:string,

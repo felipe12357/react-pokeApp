@@ -1,7 +1,7 @@
 import { ACTION_TYPES_FAVORITE_ENUM, FavoriteListAction } from './favoriteListActions';
 import {favoriteListReducer, FavoriteListState} from './favoriteListReducer';
 
-const mockFavoriteListState:FavoriteListState = {
+/* const mockFavoriteListState:FavoriteListState = {
     favoriteList:[{
         name:'pika',
         url:'string',
@@ -11,7 +11,7 @@ const mockFavoriteListState:FavoriteListState = {
         url:'string',
         isFavorite:true
     }]
-}
+} */
 
 describe('favoriteListReducer',()=>{
     let mockFavoriteListState:FavoriteListState;
